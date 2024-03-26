@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -28,7 +30,10 @@ class GenerateHouseBill extends GetView {
                 return true;
               },
               child: Scaffold(
-                appBar: const MyAppBar(title: 'House Bills'),
+                appBar: MyAppBar(
+                  title: 'House Bills',
+                  hasbackButton: true,
+                ),
                 body: SingleChildScrollView(
                   child: Form(
                     key: _formKey,
@@ -77,7 +82,7 @@ class GenerateHouseBill extends GetView {
                                 20.h.ph,
                                 MyTextFormField(
                                   controller: controller.billDueDate,
-                                  readOnly: true,
+                                  //  readOnly: true,
                                   suffixIcon: const Icon(Icons.date_range),
                                   fillColor: Colors.white,
                                   validator: emptyStringValidator,

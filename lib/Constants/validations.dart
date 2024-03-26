@@ -8,6 +8,18 @@ String? emptyStringValidator(String? val) {
   }
 }
 
+//  ID CARD VALIDATOR
+String? validateExpression(String? value) {
+  // Regular expression pattern to match the given expression format
+  RegExp regex = RegExp(r'^\d{5}-\d{7}-\d$');
+  if (value!.isEmpty) {
+    return 'Expression field cannot be empty.';
+  } else if (!regex.hasMatch(value)) {
+    return 'Invalid cnic  hint "37405-7384570-1"';
+  }
+  return null;
+}
+
 String? passwordValidator(String? v) {
   RegExp smallAlphabets = RegExp("(?=.*?[a-z])");
   RegExp capitalAlphabets = RegExp("(?=.*?[A-Z])");
@@ -30,13 +42,13 @@ String? passwordValidator(String? v) {
 
 String? emailValidator(String? v) {
   String string = v!.trim();
-  bool _emailValid = RegExp(
+  bool emailValid = RegExp(
           r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$")
       .hasMatch(string);
 
   if (string.isEmpty) {
     return 'Please enter your email';
-  } else if (!_emailValid) {
+  } else if (!emailValid) {
     return 'Please enter a valid email';
   } else {
     return null;
@@ -45,11 +57,11 @@ String? emailValidator(String? v) {
 
 String? cnicValidator(String? v) {
   String string = v!.trim();
-  bool _cnicValid = RegExp("^[0-9]{5}-[0-9]{7}-[0-9]\$").hasMatch(string);
+  bool cnicValid = RegExp("^[0-9]{5}-[0-9]{7}-[0-9]\$").hasMatch(string);
 
   if (string.isEmpty) {
     return 'Please enter your CNIC';
-  } else if (!_cnicValid) {
+  } else if (!cnicValid) {
     return 'Please enter a valid CNIC  XXXXX-XXXXXXX-X  ';
   } else {
     return null;

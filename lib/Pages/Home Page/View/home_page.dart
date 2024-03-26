@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:smartgatefinance/Constants/size_box.dart';
@@ -24,7 +25,7 @@ class HomePage extends GetView {
         builder: (controller) {
           return Scaffold(
             backgroundColor: whiteColor,
-            appBar: const MyAppBar(title: 'Home'),
+            appBar:  MyAppBar(title: 'Home',hasbackButton: false,),
             body: SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.only(left: 104.w),

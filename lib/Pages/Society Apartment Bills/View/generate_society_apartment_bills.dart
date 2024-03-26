@@ -23,7 +23,10 @@ class GenerateSocietyApartmentBills extends GetView {
         builder: (controller) {
           return SafeArea(
             child: Scaffold(
-              appBar: const MyAppBar(title: 'Apartment Bills'),
+              appBar: MyAppBar(
+                title: 'Apartment Bills',
+                hasbackButton: true,
+              ),
               body: SingleChildScrollView(
                 child: Form(
                     key: _formKey,

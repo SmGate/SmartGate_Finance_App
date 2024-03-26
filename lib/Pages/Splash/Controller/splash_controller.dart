@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 
 import 'package:get/get.dart';
@@ -9,7 +11,7 @@ import '../../../Services/Shared Preferences/MySharedPreferences.dart';
 class SplashController extends GetxController {
   @override
   void onInit() {
-    // TODO: implement onInit
+  
     super.onInit();
     // MySharedPreferences.deleteUserData();
     getUserSharedPreferencesData();

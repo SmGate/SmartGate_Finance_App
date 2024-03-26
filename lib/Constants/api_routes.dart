@@ -1,9 +1,10 @@
 class Api {
   static const String imageBaseUrl = 'http://192.168.100.7:8000/storage/';
-  static const String baseUrl = 'http://192.168.100.7:8000/api/';
+ // static const String baseUrl = 'http://192.168.100.7:8000/api/';
 
   // static const String imageBaseUrl = 'http://192.168.100.21:8000/storage/';
   // static const String baseUrl = 'http://192.168.100.21:8000/api/';
+ static const String baseUrl = 'https://www.smartgate.pk/api/';
 
   static const String login = "${baseUrl}login";
   static const String fcmtokenrefresh = "${baseUrl}fcmtokenrefresh";

@@ -35,7 +35,10 @@ class BillPage extends GetView {
         builder: (controller) {
           return Scaffold(
               backgroundColor: whiteColor,
-              appBar: const MyAppBar(title: 'Bills'),
+              appBar: MyAppBar(
+                title: 'Bills',
+                hasbackButton: true,
+              ),
               body: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 104.w),
                 child: SingleChildScrollView(
@@ -262,8 +265,7 @@ class BillPage extends GetView {
                               fontWeight: FontWeight.w600),
                         ),
                         subtitle: Text(
-                          controller.startDate.toString() ??
-                              'Select Start Date',
+                          controller.startDate.toString(),
                           style: GoogleFonts.montserrat(
                               fontSize: 14.sp,
                               fontStyle: FontStyle.normal,
@@ -283,7 +285,7 @@ class BillPage extends GetView {
                               fontWeight: FontWeight.w600),
                         ),
                         subtitle: Text(
-                          controller.startDate?.toString() ?? 'Select End Date',
+                          controller.startDate.toString(),
                           style: GoogleFonts.montserrat(
                               fontSize: 14.sp,
                               fontStyle: FontStyle.normal,

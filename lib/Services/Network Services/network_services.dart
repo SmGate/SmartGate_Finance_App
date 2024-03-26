@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, avoid_print
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer';
@@ -81,9 +83,11 @@ class NetworkServices implements BaseNetworkServices {
   @override
   Future postFormReq(url, data, {String? bearerToken}) async {
     dynamic futureData;
+    print("url");
     try {
       var request = http.MultipartRequest('POST', Uri.parse(url));
       Map<String, String> headers = {"Authorization": "Bearer $bearerToken"};
+     
       request.headers.addAll(headers);
       request.fields.addAll(data);
       var responsed = await request.send();

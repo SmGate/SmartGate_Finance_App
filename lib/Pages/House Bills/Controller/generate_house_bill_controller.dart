@@ -26,14 +26,13 @@ class GenerateHouseBillController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
-
     super.onInit();
     DateTime lastDayOfMonth =
         DateTime(DateTime.now().year, DateTime.now().month + 1, 0);
     DateTime fifthDayOfMonth =
         DateTime(DateTime.now().year, DateTime.now().month, 5);
-    DateTime dueDate = DateTime(2023, DateTime.now().month + 1, 15);
+    DateTime dueDate = DateTime.now()
+        .add(Duration(days: lastDayOfMonth.day - DateTime.now().day + 16));
     billStartDate.text = DateFormatter().formatDate1(date: fifthDayOfMonth);
     billEndDate.text = DateFormatter().formatDate1(date: lastDayOfMonth);
     billDueDate.text = DateFormatter().formatDate1(date: dueDate);

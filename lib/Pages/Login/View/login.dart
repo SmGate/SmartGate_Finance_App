@@ -67,7 +67,7 @@ class _LogInState extends State<LogIn> {
                               48.h.ph,
                               MyTextFormField(
                                   controller: controller.cnicController,
-                                  validator: emptyStringValidator,
+                                  validator: validateExpression,
                                   hintText: 'CNIC',
                                   labelText: 'CNIC'),
                               55.h.ph,

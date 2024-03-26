@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,7 +22,7 @@ class GenerateBills extends StatelessWidget {
         builder: (controller) {
           return SafeArea(
             child: Scaffold(
-              appBar: const MyAppBar(title: 'Generate Bill'),
+              appBar:  MyAppBar(title: 'Generate Bill',hasbackButton: true,),
               body: Padding(
                 padding: EdgeInsets.only(left: 104.w),
                 child: SingleChildScrollView(
